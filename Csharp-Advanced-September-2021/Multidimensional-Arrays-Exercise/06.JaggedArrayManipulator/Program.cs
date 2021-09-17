@@ -40,7 +40,7 @@ namespace _06.JaggedArrayManipulator
 
                 int row = int.Parse(commandArgs[1]);
                 int col = int.Parse(commandArgs[2]);
-                int value = int.Parse(commandArgs[3]);
+                double value = double.Parse(commandArgs[3]);
 
                 if (row < 0 || row >= rows || col < 0 || col >= jagged[row].Length)
                 {
