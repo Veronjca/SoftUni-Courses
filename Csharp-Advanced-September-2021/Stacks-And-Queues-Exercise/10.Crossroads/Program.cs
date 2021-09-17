@@ -14,18 +14,15 @@ namespace _10.Crossroads
 
             Queue<string> cars = new Queue<string>();
 
-            bool flag = false;
             int counter = 0;
 
             int temp = greenLightDuration;
 
             while (input != "END")
             {
-
                 if (input == "green")
                 {
-
-                    while (true)
+                    while (cars.Count > 0 && temp > 0)
                     {
                         if (cars.Peek().Length > temp)
                         {
@@ -52,14 +49,8 @@ namespace _10.Crossroads
                             temp -= cars.Dequeue().Length;
                         }
 
-                        if (cars.Count == 0)
-                        {
-                            break;
 
-                        }
                     }
-
-
                 }
                 else
                 {
