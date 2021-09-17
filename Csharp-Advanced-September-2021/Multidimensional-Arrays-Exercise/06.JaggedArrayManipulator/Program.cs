@@ -7,13 +7,13 @@ namespace _06.JaggedArrayManipulator
     {
         static void Main(string[] args)
         {
-            int rows = int.Parse(Console.ReadLine());
+            byte rows = byte.Parse(Console.ReadLine());
 
-            int[][] jagged = new int[rows][];
+            double[][] jagged = new double[rows][];
 
             for (int i = 0; i < rows; i++)
             {
-                int[] input = ReadArrayFromConsole();
+                double[] input = ReadArrayFromConsole();
                 jagged[i] = input;
             }
 
@@ -64,11 +64,11 @@ namespace _06.JaggedArrayManipulator
                 Console.WriteLine(String.Join(" ", item));
             }
         }
-        private static int[] ReadArrayFromConsole()
+        private static double[] ReadArrayFromConsole()
         {
             return Console.ReadLine()
                 .Split(new string[] { " ", ", " }, StringSplitOptions.RemoveEmptyEntries)
-                .Select(int.Parse)
+                .Select(double.Parse)
                 .ToArray();
         }
     }
