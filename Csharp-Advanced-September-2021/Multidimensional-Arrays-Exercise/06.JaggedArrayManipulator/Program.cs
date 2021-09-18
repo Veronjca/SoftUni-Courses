@@ -63,6 +63,7 @@ namespace _06.JaggedArrayManipulator
             {
                 Console.WriteLine(String.Join(" ", item));
             }
+            
         }
         private static double[] ReadArrayFromConsole()
         {
