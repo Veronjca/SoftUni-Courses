@@ -6,7 +6,7 @@ namespace CustomLinkedList
 {
     public class LinkedListItem<T>
     {
-        public LinkedListItem<T>(T value)
+        public LinkedListItem(T value)
         {
             Value = value;
         }
@@ -15,3 +15,4 @@ namespace CustomLinkedList
         public T Value { get; set; }
     }
 }
+
