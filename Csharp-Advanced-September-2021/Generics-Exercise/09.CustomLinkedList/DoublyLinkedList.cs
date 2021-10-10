@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CustomLinkedList
 {
-    public class CustomDoublyLinkedList<T>
+    public class DoublyLinkedList<T>
     {
         private LinkedListItem<T> first = null;
         private LinkedListItem<T> last = null;
