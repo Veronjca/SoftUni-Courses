@@ -7,7 +7,7 @@ namespace CustomLinkedList
        public static void Main(string[] args)
         {            
 
-            var list = new CustomDoublyLinkedList<int>();
+            var list = new DoublyLinkedList<int>();
             list.AddFirst(3);
             Console.WriteLine(string.Join("-", list.ToArray()));
             // 3
