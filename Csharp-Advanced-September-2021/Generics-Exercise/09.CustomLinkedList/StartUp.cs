@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CustomLinkedList
+namespace CustomDoublyLinkedList
 {
     public class StartUp
     {
