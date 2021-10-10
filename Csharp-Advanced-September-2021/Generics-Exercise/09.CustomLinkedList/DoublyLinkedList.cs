@@ -4,10 +4,10 @@ using System.Text;
 
 namespace CustomDoublyLinkedList
 {
-    public class CustomDoublyLinkedList
+    public class CustomDoublyLinkedList<T>
     {
-        private LinkedListItem first = null;
-        private LinkedListItem last = null;
+        private LinkedListItem<T> first = null;
+        private LinkedListItem<T> last = null;
 
         public int Count { get; private set; }
 
@@ -29,9 +29,9 @@ namespace CustomDoublyLinkedList
         //    }
         //}
 
-        public void AddFirst(int number)
+        public void AddFirst(T item)
         {
-            LinkedListItem currentItem = new LinkedListItem(number);
+            LinkedListItem<T> currentItem = new LinkedListItem<T>(item);
             if (this.first == null )
             {
                 first = currentItem;
@@ -47,9 +47,9 @@ namespace CustomDoublyLinkedList
             Count++;
         }
 
-        public void AddLast(int number)
+        public void AddLast(T item)
         {
-            LinkedListItem currentItem = new LinkedListItem(number);
+            LinkedListItem<T> currentItem = new LinkedListItem<T>(item);
             if (this.first == null)
             {
                 first = currentItem;
@@ -64,14 +64,14 @@ namespace CustomDoublyLinkedList
             Count++;
         }
 
-        public int RemoveFirst()
+        public T RemoveFirst()
         {
             if (first == null)
             {
                 throw new InvalidOperationException("Linked List is empty!");
             }
 
-            int currentFirstValue = first.Value;
+            T currentFirstValue = first.Value;
 
             if (first == last)//when collection have only 1 element
             {
@@ -81,7 +81,7 @@ namespace CustomDoublyLinkedList
             }
             else
             {
-                LinkedListItem newFirst = first.Next;
+                LinkedListItem<T> newFirst = first.Next;
                 newFirst.Previous = null;
                 first = newFirst;
                 Count--;
@@ -89,13 +89,13 @@ namespace CustomDoublyLinkedList
             return currentFirstValue;
         }
 
-        public int RemoveLast()
+        public T RemoveLast()
         {
             if (last == null)
             {
                 throw new InvalidOperationException("Linked List is empty!");
             }
-            int currentLast = last.Value;
+            T currentLast = last.Value;
 
             if (first == last)//when collection have only 1 element
             {
@@ -105,7 +105,7 @@ namespace CustomDoublyLinkedList
             }
             else
             {
-                LinkedListItem newLast = last.Previous;
+                LinkedListItem<T> newLast = last.Previous;
                 newLast.Next = null;
                 last = newLast;
                 Count--;
@@ -114,20 +114,20 @@ namespace CustomDoublyLinkedList
             return currentLast;
         }
 
-        public void ForEach (Action<int> action)
+        public void ForEach (Action<T> action)
         {
-            int[] array = ToArray();
+            T[] array = ToArray();
 
             foreach (var item in array)
             {
                 action(item);
             }
         }
-        public int[] ToArray()
+        public T[] ToArray()
         {
-            int[] array = new int[Count];
+            T[] array = new T[Count];
 
-            LinkedListItem current = first;
+            LinkedListItem<T> current = first;
             int index = 0;
 
             while (current != null)
