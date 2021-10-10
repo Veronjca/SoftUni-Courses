@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CustomDoublyLinkedList
+namespace CustomLinkedList
 {
     public class CustomDoublyLinkedList<T>
     {
