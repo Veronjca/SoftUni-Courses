@@ -11,7 +11,7 @@ namespace CustomLinkedList
 
         public int Count { get; private set; }
 
-        // get count with recursion
+        // another way to get count 
         //public int Count
         //{
         //    get
