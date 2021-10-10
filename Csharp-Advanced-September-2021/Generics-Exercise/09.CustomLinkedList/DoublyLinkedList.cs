@@ -29,6 +29,16 @@ namespace CustomLinkedList
         //    }
         //}
 
+        // Get count with recursion / GetCount(first)
+        //public int GetCount(LinkedListItem<T> current)
+        //{
+        //    if (current == null)
+        //    {
+        //        return 0;
+        //    }
+
+        //    return 1 + GetCount(current.Next);
+        //}
         public void AddFirst(T item)
         {
             LinkedListItem<T> currentItem = new LinkedListItem<T>(item);
