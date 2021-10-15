@@ -16,18 +16,18 @@ namespace _01.BirthdayCelebration
             while (guestsCapacity.Count > 0 && plates.Count > 0)
             {
 
-                int currentCup = guestsCapacity.Peek();
-                int currentBottle = plates.Pop();
+                int currentGuest = guestsCapacity.Peek();
+                int currentPlate = plates.Pop();
 
-                if (currentBottle - currentCup > 0)
+                if (currentPlate - currentGuest > 0)
                 {
                     guestsCapacity.Pop();
-                    wastedFood += currentBottle - currentCup;
+                    wastedFood += currentPlate - currentGuest;
                 }
-                else if (currentBottle - currentCup < 0)
+                else if (currentPlate - currentGuest < 0)
                 {
                     guestsCapacity.Pop();
-                    guestsCapacity.Push(Math.Abs(currentBottle - currentCup));
+                    guestsCapacity.Push(Math.Abs(currentPlate - currentGuest));
 
                 }
                 else
@@ -52,7 +52,7 @@ namespace _01.BirthdayCelebration
         private static int[] ReadArrayFromConsole()
         {
             return Console.ReadLine()
-                .Split(" ", StringSplitOptions.RemoveEmptyEntries)
+                .Split(' ', StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse)
                 .ToArray();
         }
