@@ -10,7 +10,7 @@ function aggreagate(arr){
     });
 
    console.log(sum);
-   console.log(inverseSum.toFixed(4));
+   console.log(inverseSum);
    console.log(concat);
 }
 
