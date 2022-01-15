@@ -4,13 +4,14 @@ let arr = [];
 for (let i = 0; i < orders.length; i++) {
     let current = {};
     Object.assign(current, orders[i].template);
-    // for (const part of orders[i].parts) {
-    //     current[part] = library[part];
-    // }  
-    for (let j = 0; j < orders[i].parts.length; j++) {
-       Object.assign(current, {[orders[i].parts[j]]: library[orders[i].parts[j]]});
+    for (const part of orders[i].parts) {
+        current[part] = library[part];
+    } 
+    // other solution 
+    // for (let j = 0; j < orders[i].parts.length; j++) {
+    //    Object.assign(current, {[orders[i].parts[j]]: library[orders[i].parts[j]]});
         
-    }
+    // }
     arr.push(current);
 }
 return arr;
