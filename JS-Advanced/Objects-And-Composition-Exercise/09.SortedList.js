@@ -1,17 +1,22 @@
 function createSortedList() {
+    let elements = [];
   return {
-    elements: [],
     add(element) {
-      this.elements.push(element);
+      elements.push(element);
+      elements.sort((a,b) => a-b);
     },
     remove(index) {
-      this.elements.splice(index, 1);
+        if(index >= 0 && index < elements.length){
+            elements.splice(index, 1);
+        }  
     },
     get(index) {
-      return this.elements[index];
+        if(index >= 0 && index < elements.length){
+            return elements[index];
+        }    
     },
-    size() {
-      return this.elements.length();
+    get size() {
+      return elements.length;
     },
   };
 }
