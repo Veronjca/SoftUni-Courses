@@ -5,7 +5,6 @@ function search() {
    towns.forEach(x => {
       x.style.fontWeight = 'normal';
       x.style.textDecoration = 'none';
-
    })
    towns.forEach(x => {
       if(x.textContent.includes(text)){
