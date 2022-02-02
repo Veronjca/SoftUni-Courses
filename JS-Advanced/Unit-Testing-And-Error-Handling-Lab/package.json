@@ -1,0 +1,16 @@
+{
+  "name": "unit-testing-and-error-handling-lab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "01.SubSum.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^9.2.0"
+  }
+}
