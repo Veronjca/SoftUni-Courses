@@ -4,7 +4,7 @@ class Company {
   }
 
   addEmployee(name, salary, position, department) {
-    if ((!name, !salary, !position, !department)) {
+    if ((!name || !salary || !position || !department)) {
       throw new Error("Invalid input!");
     } else if (salary < 0) {
       throw new Error("Invalid input!");
@@ -37,7 +37,6 @@ class Company {
     result += `Average salary: ${avgSalary.toFixed(2)}\n`;
     this.departments[best].forEach(x => {
             result += `${x['name']} ${x['salary']} ${x['position']}\n`;
-
     })
     return result.trim();
   }
