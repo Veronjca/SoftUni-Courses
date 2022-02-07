@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Contacts Builder</title>
+  </head>
+
+  <body>
+    <div id="main">
+      <article>
+        <!-- <div class="title">{firstName lastName} <button>&#8505;</button></div>
+        <div class="info">
+          <span> {phone}</span>
+          <span>&#9993; {email}</span> -->
+        </div>
+      </article>
+    </div>
+    <script>
+      class Contact {
+        constructor(firstName, lastName, phone, email) {
+          this.firstName = firstName;
+          this.lastName = lastName;
+          this.phone = phone;
+          this.email = email;
+          this._online = false;
+        }
+        get online() {
+          return this._online;
+        }
+        set online(value) {
+          this._online = value;
+          let element = document.querySelector('.title');
+          if(this._online && element){
+              element.classList.add('online');
+          }else if(!this._online && element){
+              element.classList.remove('online');
+          }
+        }
+        render(id) {
+          let parent = document.querySelector(`#${id}`);
+          let article = document.createElement("article");
+          let firstDiv = document.createElement("div");
+          let secondDiv = document.createElement("div");
+          let button = document.createElement("button");
+          let firstSpan = document.createElement("span");
+          let secondSpan = document.createElement("span");
+
+          firstDiv.classList.add("title");
+          firstDiv.textContent = `${this.firstName} ${this.lastName}`;
+          button.textContent = "\u2139";
+          button.addEventListener("click", showInfo);
+          firstDiv.appendChild(button);
+          secondDiv.classList.add("info");
+          secondDiv.style.display = "none";
+          firstSpan.textContent = `\u260F ${this.phone}`;
+          secondSpan.textContent = `\u2709 ${this.email}`;
+          secondDiv.appendChild(firstSpan);
+          secondDiv.appendChild(secondSpan);
+
+          article.appendChild(firstDiv);
+          article.appendChild(secondDiv);
+          parent.appendChild(article);
+
+          function showInfo(ev) {
+            if (secondDiv.style.display === "none") {
+              secondDiv.style.display = "block";
+            } else {
+              secondDiv.style.display = "none";
+            }
+          }
+        }
+      }
+      let contacts = [
+        new Contact("Ivan", "Ivanov", "0888 123 456", "i.ivanov@gmail.com"),
+        new Contact("Maria", "Petrova", "0899 987 654", "mar4eto@abv.bg"),
+        new Contact("Jordan", "Kirov", "0988 456 789", "jordk@gmail.com"),
+      ];
+      contacts.forEach((c) => c.render("main"));
+
+      // After 1 second, change the online status to true
+      setTimeout(() => (contacts[1].online = true), 2000);
+    </script>
+  </body>
+</html>
