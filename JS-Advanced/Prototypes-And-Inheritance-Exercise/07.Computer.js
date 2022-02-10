@@ -90,8 +90,8 @@ function solve() {
     Monitor,
     Computer,
     Laptop,
-    Desktop
-}
+    Desktop,
+  };
 }
 
 let classes = solve();
