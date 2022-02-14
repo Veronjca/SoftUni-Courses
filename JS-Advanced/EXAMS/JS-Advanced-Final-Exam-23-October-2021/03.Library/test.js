@@ -32,7 +32,7 @@ describe("Library tests", () => {
   });
 
   it("calcPriceOfBook method should return exact message when params are valid and year is less than or equal to 1980", () => {
-    let result = library.calcPriceOfBook("Paf", 1979);
+    let result = library.calcPriceOfBook("Paf", 1980);
     let expected = `Price of Paf is 10.00`;
     expect(result).to.equal(expected);
 
@@ -75,7 +75,6 @@ describe("Library tests", () => {
   it("arrangeTheBooks method should throw Error when count is less than zero", () => {
     expect(() => library.arrangeTheBooks(-1)).to.throw(Error, "Invalid input");
     expect(() => library.arrangeTheBooks(-20)).to.throw(Error, "Invalid input");
-    expect(() => library.arrangeTheBooks(0)).to.throw(Error, "Invalid input");
   });
 
   it("arrangeTheBooks method should return message when count of books is bigger than or equal to available space", () => {
