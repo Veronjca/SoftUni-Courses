@@ -54,7 +54,7 @@ class Story {
 
     let currentComment = this._comments.find((x) => x.Id === id);
     let lastReplay = currentComment.Replies[currentComment.Replies.length - 1];
-    let replyIndex = lastReplay ? lastReplay.Id.toString().split('') : 0;
+    let replyIndex = lastReplay ? lastReplay.Id.split('') : 0;
     let element = replyIndex === 0 ? 0 : Number(replyIndex[replyIndex.length - 1]);
 
     let newReply = {
