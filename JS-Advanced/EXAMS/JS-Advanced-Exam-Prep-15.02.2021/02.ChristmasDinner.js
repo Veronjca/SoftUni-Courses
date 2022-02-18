@@ -5,9 +5,9 @@ class ChristmasDinner {
     this.products = [];
     this.guests = {};
   }
-get budget(){
+  get budget() {
     return this._budget;
-}
+  }
   set budget(value) {
     if (value < 0) {
       throw new Error("The budget cannot be a negative number");
@@ -40,30 +40,30 @@ get budget(){
   }
 
   inviteGuests(name, dish) {
-    if (!this.dishes.some(x => x.recipeName === dish)) {
+    if (!this.dishes.some((x) => x.recipeName === dish)) {
       throw new Error("We do not have this dish");
     }
 
-    if(this.guests.hasOwnProperty(name)){
-        throw new Error("This guest has already been invited");
+    if (this.guests.hasOwnProperty(name)) {
+      throw new Error("This guest has already been invited");
     }
 
     this.guests[name] = dish;
     return `You have successfully invited ${name}!`;
   }
 
-  showAttendance(){
-      let result = '';
+  showAttendance() {
+    let result = "";
 
-      for (const [key, value] of Object.entries(this.guests)) {
-          let currentDish = this.dishes.find(x => x.recipeName === value);
-          result += `${key} will eat ${value}, which consists of ${currentDish.productsList.join(', ')}\n`;
-      }
+    for (const [key, value] of Object.entries(this.guests)) {
+      let currentDish = this.dishes.find((x) => x.recipeName === value);
+      result += `${key} will eat ${value}, which consists of ${currentDish.productsList.join(", ")}\n`;
+    }
 
-      return result.trimEnd();
+    return result.trimEnd();
   }
 }
-let dinner = new ChristmasDinner(300);
+let dinner = new ChristmasDinner(300);
 
 dinner.budget = 200;
 console.log(dinner.budget);
