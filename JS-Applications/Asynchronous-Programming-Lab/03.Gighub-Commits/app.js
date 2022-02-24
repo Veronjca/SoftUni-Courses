@@ -15,7 +15,7 @@ function loadCommits() {
     .catch(errorHandler);
 
   function responseHandler(data) {
-      ulElement.innerHTML = '';
+    ulElement.innerHTML = "";
     data.forEach((element) => {
       let liElement = document.createElement("li");
       liElement.textContent = `${element.commit.author.name}: ${element.commit.message}`;
@@ -25,7 +25,7 @@ function loadCommits() {
   }
 
   function errorHandler(error) {
-    ulElement.innerHTML = '';
+    ulElement.innerHTML = "";
     let liElement = document.createElement("li");
     liElement.textContent = `Error: ${error.message} (Not Found)`;
 
