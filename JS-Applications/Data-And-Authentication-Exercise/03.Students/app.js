@@ -22,7 +22,7 @@ function solve() {
       return;
     }
 
-    if (/^[A-Za-z]+$/.test(firstName) || /^[A-Za-z]+$/.test(lastName) || /^[0-9]+$/.test(facultyNumber)|| !Number(grade)) {
+    if (!/^[A-Za-z]+$/.test(firstName) || !/^[A-Za-z]+$/.test(lastName) || !/^[0-9]+$/.test(facultyNumber) || !Number(grade)) {
       form.reset();
       alert("Error: Invalid credentials!");
       return;
