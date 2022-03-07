@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="static/style.css">
+    <title>FURNITURE</title>
+</head>
+
+<body>
+    <header>
+        <h1>Furniture List</h1>
+        <nav>
+            <a href="home.html">Catalog</a>
+            <div id="guest">
+                <a href="auth.html" class="active">Login</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="container">
+            <div id="exercise">
+                <div class="wrapper">
+                    <div class="card-wrapper">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2>Register</h2>
+                                <form id="register-form">
+                                    <label>E-mail: <input type="text" name="email" required></label>
+                                    <label>Password: <input type="password" name="password" required></label>
+                                    <label>Repeat: <input type="password" name="rePass" required></label>
+                                    <button>Register</button>
+                                </form>
+                                <hr>
+                                <h2>Login</h2>
+                                <form id="login-form">
+                                    <label>E-mail: <input type="text" name="email" required></label>
+                                    <label>Password: <input type="password" name="password" required></label>
+                                    <button>Login</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="scripts/auth.js"></script>
+</body>
+
+</html>

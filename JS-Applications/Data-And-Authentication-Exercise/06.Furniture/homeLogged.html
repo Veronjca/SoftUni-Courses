@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="static/style.css" />
+    <title>FURNITURE</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Furniture List</h1>
+      <nav>
+        <a href="./home.html" class="active">Catalog</a>
+        <div id="user">
+          <a id="logoutBtn" href="javascript:void(0)">Logout</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div id="container">
+        <div id="exercise">
+          <div class="wrapper">
+            <div class="card-wrapper">
+              <div class="row">
+                <div class="col-md-12">
+                  <h2>Create Product</h2>
+                  <form id="create-form">
+                    <label>Name: <input type="text" name="name" required /></label>
+                    <label>Price: <input type="text" name="price"  required/></label>
+                    <label>Factor: <input type="text" name="factor" required /></label>
+                    <label>Img: <input type="text" name="img" required/></label>
+                    <button id="createBtn">Create</button>
+                  </form>
+                  <hr />
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Decoration factor</th>
+                        <th>Mark</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                  <button id="buyBtn">Buy</button>
+                  <hr />
+                  <div class="orders">
+                    <p>Bought furniture: <span id="boughtFurniture">Office chair, Sofa</span></p>
+                    <p>Total price: <span id="totalPrice">419 $</span></p>
+                    <button id="allOrdersBtn">All orders</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="scripts/solution.js"></script>
+  </body>
+</html>
