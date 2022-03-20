@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "lit-html": "^2.2.1",
+    "lite-server": "^2.6.1",
+    "page": "^1.11.6"
+  },
+
+  "scripts": {
+    "start": "lite-server"
+  }
+}
