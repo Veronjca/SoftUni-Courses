@@ -2,10 +2,10 @@
 const { chromium } = require('playwright-chromium');
 const { expect } = require('chai');
 
-const host = 'http://localhost:3000'; // Application host (NOT service host - that can be anything)
-const DEBUG = false;
+const host = 'http://localhost:5500'; // Application host (NOT service host - that can be anything)
+const DEBUG = true;
 
-const mockData = require('./mock-data.json');
+const mockData = require('C:/Users/Veronica/Desktop/SoftUni-Courses/JS-Applications/Architecture-And-Testing-Exercise/03.SoftTerest/tests/mock-data.json');
 const endpoints = {
     register: '/users/register',
     login: '/users/login',

@@ -1,11 +1,27 @@
 {
+  "name": "softterest",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "test": "mocha tests",
+    "start": "http-server -a localhost -p 3000 -P http://localhost:3000/?"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "4.3.3",
+    "http-server": "0.12.3",
+    "mocha": "8.3.0",
+    "playwright-chromium": "1.9.1"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "keywords": [],
+  "description": "",
   "dependencies": {
     "lit-html": "^2.2.1",
     "lite-server": "^2.6.1",
     "page": "^1.11.6"
-  },
-
-  "scripts": {
-    "start": "lite-server"
   }
 }

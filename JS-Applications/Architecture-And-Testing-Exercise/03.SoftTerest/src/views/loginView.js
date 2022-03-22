@@ -1,4 +1,4 @@
-import { render, html } from "../../../node_modules/lit-html/lit-html.js";
+import { render, html } from "../../node_modules/lit-html/lit-html.js";
 import { navBarView } from "./navBarView.js";
 import * as requestHandler from "../requestHandler.js";
 import page from "../../node_modules/page/page.mjs";

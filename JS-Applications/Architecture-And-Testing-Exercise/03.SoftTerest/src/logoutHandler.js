@@ -1,5 +1,5 @@
 import * as requestHandler from "./requestHandler.js";
-import page from '../../node_modules/page/page.mjs';
+import page from '../node_modules/page/page.mjs';
 
 export const logoutHandler = async () => {
     await requestHandler.logoutUser();

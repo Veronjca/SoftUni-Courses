@@ -1,4 +1,4 @@
-import page from '../../node_modules/page/page.mjs';
+import page from '../node_modules/page/page.mjs';
 import { homeView } from './views/homeView.js';
 import { loginView } from './views/loginView.js';
 import { dashboardView } from './views/dashboardView.js';
