@@ -1,0 +1,14 @@
+C:\Users\Veronica\source\repos\05.FootballTeamGenerator\bin\Debug\netcoreapp3.1\05.FootballTeamGenerator.exe
+C:\Users\Veronica\source\repos\05.FootballTeamGenerator\bin\Debug\netcoreapp3.1\05.FootballTeamGenerator.deps.json
+C:\Users\Veronica\source\repos\05.FootballTeamGenerator\bin\Debug\netcoreapp3.1\05.FootballTeamGenerator.runtimeconfig.json
+C:\Users\Veronica\source\repos\05.FootballTeamGenerator\bin\Debug\netcoreapp3.1\05.FootballTeamGenerator.runtimeconfig.dev.json
+C:\Users\Veronica\source\repos\05.FootballTeamGenerator\bin\Debug\netcoreapp3.1\05.FootballTeamGenerator.dll
+C:\Users\Veronica\source\repos\05.FootballTeamGenerator\bin\Debug\netcoreapp3.1\05.FootballTeamGenerator.pdb
+C:\Users\Veronica\source\repos\05.FootballTeamGenerator\obj\Debug\netcoreapp3.1\05.FootballTeamGenerator.csproj.AssemblyReference.cache
+C:\Users\Veronica\source\repos\05.FootballTeamGenerator\obj\Debug\netcoreapp3.1\05.FootballTeamGenerator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Veronica\source\repos\05.FootballTeamGenerator\obj\Debug\netcoreapp3.1\05.FootballTeamGenerator.AssemblyInfoInputs.cache
+C:\Users\Veronica\source\repos\05.FootballTeamGenerator\obj\Debug\netcoreapp3.1\05.FootballTeamGenerator.AssemblyInfo.cs
+C:\Users\Veronica\source\repos\05.FootballTeamGenerator\obj\Debug\netcoreapp3.1\05.FootballTeamGenerator.csproj.CoreCompileInputs.cache
+C:\Users\Veronica\source\repos\05.FootballTeamGenerator\obj\Debug\netcoreapp3.1\05.FootballTeamGenerator.dll
+C:\Users\Veronica\source\repos\05.FootballTeamGenerator\obj\Debug\netcoreapp3.1\05.FootballTeamGenerator.pdb
+C:\Users\Veronica\source\repos\05.FootballTeamGenerator\obj\Debug\netcoreapp3.1\05.FootballTeamGenerator.genruntimeconfig.cache

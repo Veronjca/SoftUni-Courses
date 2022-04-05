@@ -15,6 +15,8 @@ namespace _05.FootballTeamGenerator
             this.Name = name;
             this.players = new List<Player>();
         }
+
+        public List<Player> Players => this.players.asReadOnly();
         public string Name
         {
             get => this.name;
