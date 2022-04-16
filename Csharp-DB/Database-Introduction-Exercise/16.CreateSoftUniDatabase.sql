@@ -1,0 +1,28 @@
+--CREATE DATABASE [SoftUni]
+CREATE TABLE [Towns]
+(
+    [Id] INT IDENTITY PRIMARY KEY,
+    [Name] NVARCHAR(MAX) NOT NULL
+)
+CREATE TABLE [Addresses]
+(
+    [Id] INT IDENTITY PRIMARY KEY,
+    [AddressText] NVARCHAR(MAX) NOT NULL,
+    [TownId] INT FOREIGN KEY REFERENCES [Towns]([Id])
+)
+CREATE TABLE [Departments]
+(
+    [Id] INT IDENTITY PRIMARY KEY,
+    [Name] NVARCHAR(MAX) NOT NULL
+)
+CREATE TABLE [Employees]
+(
+    [Id] INT IDENTITY PRIMARY KEY,
+    [FirstName] NVARCHAR(MAX) NOT NULL,
+    [LastName] NVARCHAR(MAX) NOT NULL,
+    [JobTitle] NVARCHAR(MAX) NOT NULL,
+    [DepartmentId] INT FOREIGN KEY REFERENCES [Departments]([Id]),
+    [HireDate] DATE,
+    [Salary] DECIMAL(10,2) NOT NULL,
+    [AddressId] INT FOREIGN KEY REFERENCES [Addresses]([Id])
+)
