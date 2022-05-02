@@ -1,8 +1,18 @@
-SELECT * FROM (SELECT c.[ContinentCode], c.[CurrencyCode], 
+SELECT [ContinentCode], 
+	[CurrencyCode], 
+	[CurrencyUsage] 
+	FROM (SELECT [ContinentCode], 
+	[CurrencyCode],
+	[CurrencyUsage],
+	DENSE_RANK() OVER (PARTITION BY [ContinentCode] ORDER BY [CurrencyUsage] DESC) AS [Rank]
+	FROM (SELECT [ContinentCode], 
+	[CurrencyCode], 
 	COUNT([CurrencyCode]) AS [CurrencyUsage]
-	FROM [Countries] AS c
-	GROUP BY c.[ContinentCode], c.[CurrencyCode]) AS x
-	WHERE [CurrencyUsage] NOT IN(1,0)
+	FROM [Countries]
+	GROUP BY [ContinentCode], [CurrencyCode]) AS a) AS b
+	WHERE [CurrencyUsage] NOT IN (1,0) AND [Rank] = 1
+
+ 
 
 
 	
