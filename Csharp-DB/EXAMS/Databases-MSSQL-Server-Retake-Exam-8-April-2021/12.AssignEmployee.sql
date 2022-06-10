@@ -15,7 +15,9 @@ BEGIN
 	IF (@categoryDepartmentId != @employeeDepartmentId)
 		THROW 51000, 'Employee doesn''t belong to the appropriate department!', 1; 
 	ELSE
-		UPDATE Reports
-			SET EmployeeId = @EmployeeId
-			WHERE Id = @ReportId
+		BEGIN
+			UPDATE Reports
+				SET EmployeeId = @EmployeeId
+				WHERE Id = @ReportId
+		END
 END
