@@ -20,7 +20,7 @@ namespace _03.MinionNames
             await using(connectionToMinionsDB)
             {
                 string getVillainNameQuery = "SELECT Name FROM Villains WHERE Id = @villainID";
-                string getMinionsInfoQuery = $"SELECT ROW_NUMBER() OVER (ORDER BY m.Name) as RowNum, m.Name,  m.Age FROM MinionsVillains AS mv JOIN Minions As m ON mv.MinionId = m.Id WHERE mv.VillainId = {villainID} ORDER BY m.Name";
+                string getMinionsInfoQuery = $"SELECT ROW_NUMBER() OVER (ORDER BY m.Name) as RowNum, m.Name,  m.Age FROM MinionsVillains AS mv JOIN Minions As m ON mv.MinionId = m.Id WHERE mv.VillainId = @villainID ORDER BY m.Name";
 
                 SqlCommand getVillainNameCommand = new SqlCommand(getVillainNameQuery, connectionToMinionsDB);
                 getVillainNameCommand.Parameters.AddWithValue("@villainID", villainID);
@@ -35,6 +35,7 @@ namespace _03.MinionNames
                 {
                     DataTable table = new DataTable();
                     SqlDataAdapter adapter = new SqlDataAdapter(getMinionsInfoQuery, connectionToMinionsDB);
+                    adapter.SelectCommand.Parameters.AddWithValue("@villainID", villainID);
                     using (adapter)
                     {
                         adapter.Fill(table);
