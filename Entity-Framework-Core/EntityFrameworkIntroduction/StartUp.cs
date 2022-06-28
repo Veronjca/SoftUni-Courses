@@ -14,7 +14,7 @@ namespace SoftUni
         public static void Main(string[] args)
         {
             SoftUniContext context = new SoftUniContext();
-            Console.WriteLine(RemoveTown(context));
+            Console.WriteLine(GetEmployeesInPeriod(context));
         }
         public static string GetEmployeesFullInformation(SoftUniContext context)
         {
@@ -137,7 +137,6 @@ namespace SoftUni
              .ToList();
 
             StringBuilder result = new StringBuilder();
-
             foreach (var employee in employees)
             {
                 result.AppendLine($"{employee.FirstName} {employee.LastName} - Manager: {employee.ManagerFirstName} {employee.ManagerLastName}");
