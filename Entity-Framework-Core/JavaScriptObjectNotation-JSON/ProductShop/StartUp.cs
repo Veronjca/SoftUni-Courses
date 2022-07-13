@@ -212,19 +212,18 @@ namespace ProductShop
             };
             var users = context.Users
                 .Include(u => u.ProductsSold)
-                .ThenInclude(ps => ps.CategoryProducts)
-                .ThenInclude(cp => cp.Product)
+                .ToList()
                 .Where(u => u.ProductsSold.Count > 0 && u.ProductsSold.Count(p => p.BuyerId != null) > 0)
                 .Select(u => new
-                {                   
-                    FirstName = u.FirstName,
+                {
+                    FirstName = u.FirstName, 
                     LastName = u.LastName,
                     Age = u.Age,
                     SoldProducts = new
                     {
-                        Count = u.ProductsSold.Count,
+                        Count = u.ProductsSold.Count(p => p.BuyerId != null),
                         Products = u.ProductsSold
-                                    .Where(p => p.BuyerId != null)
+                                     .Where(p => p.BuyerId != null)
                                     .Select(p => new
                                     {
                                         Name = p.Name,
@@ -237,35 +236,15 @@ namespace ProductShop
                 .OrderByDescending(u => u.SoldProducts.Products.Count)
                 .ToList();
 
-            var config = new MapperConfiguration(c =>
+            var resultObj = new
             {
-                c.CreateMap<User, UserDto>();
-                c.CreateMap<Product, ProductDto>();
-            });
+                UsersCount = users.Count,
+                Users = users
+            };
 
-            var mapper = config.CreateMapper();
-
-            string usersJson = JsonConvert.SerializeObject(userDto, settings);
+            string usersJson = JsonConvert.SerializeObject(resultObj, settings);
 
             return usersJson;
-        }
-
-        public class UserDto
-        {
-            public int Count { get; set; }
-            public string FirstName { get; set; }
-
-            public string LastName { get; set; }
-
-            public int Age { get; set; }
-            public List<Product> SoldProducts { get; set; }
-        }
-
-        public class ProductDto
-        {
-            public int Count { get; set; }
-            public string Name { get; set; }
-            public decimal Price { get; set; }
         }
     }
 }
