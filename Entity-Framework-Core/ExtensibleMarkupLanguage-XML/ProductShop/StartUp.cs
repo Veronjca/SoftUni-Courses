@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using ProductShop.Data;
 using ProductShop.Dtos.Import;
 using ProductShop.Models;
@@ -8,6 +9,8 @@ using System.IO;
 using System.Linq;
 using System.Xml;
 using System.Xml.Serialization;
+using AutoMapper.QueryableExtensions;
+using ProductShop.Dtos.Export;
 
 namespace ProductShop
 {
@@ -30,6 +33,8 @@ namespace ProductShop
 
             string categoriesProductsData = File.ReadAllText("../../../Datasets/categories-products.xml");
             Console.WriteLine(ImportCategoryProducts(context, categoriesProductsData));
+
+            Console.WriteLine(GetProductsInRange(context));
 
 
         }
@@ -138,6 +143,36 @@ namespace ProductShop
             return $"Successfully imported {categoriesProducts.Count}";
 
         }
+
+        //05. Export Products In Range
+        public static string GetProductsInRange(ProductShopContext context)
+        {
+            IMapper mapper = CreateMapper();
+
+            var products = context.Products
+              .ProjectTo<ExportProductDto>(mapper.ConfigurationProvider)             
+              .Where(p => p.Price >= 500 && p.Price <= 1000)
+              .OrderBy(p => p.Price)
+              .Take(10)
+              .ToList();
+
+            XmlRootAttribute productRoot = new XmlRootAttribute();
+            productRoot.ElementName = "Products";
+
+            XmlSerializerNamespaces namespaces = new XmlSerializerNamespaces();
+            namespaces.Add(String.Empty, String.Empty);
+
+            XmlSerializer serializer = new XmlSerializer(typeof(List<ExportProductDto>), productRoot);
+
+            using (TextWriter writer = new StreamWriter("result.xml"))
+            {
+                serializer.Serialize(writer, products, namespaces);
+            }
+                
+            string result = File.ReadAllText("result.xml");
+            return result;
+        }
+
 
         public static IMapper CreateMapper()
         {

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using ProductShop.Dtos.Export;
 using ProductShop.Dtos.Import;
 using ProductShop.Models;
 using System;
@@ -16,6 +17,9 @@ namespace ProductShop
             CreateMap<CategoryDto, Category>();
 
             CreateMap<CategoryProductDto, CategoryProduct>();
+
+            CreateMap<Product, ExportProductDto>()
+                .ForMember(dest => dest.BuyerName, opt => opt.MapFrom(src => src.Buyer.FirstName + " " + src.Buyer.LastName));
         }
     }
 }
