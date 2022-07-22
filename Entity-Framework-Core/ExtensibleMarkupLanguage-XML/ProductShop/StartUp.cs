@@ -34,7 +34,7 @@ namespace ProductShop
             string categoriesProductsData = File.ReadAllText("../../../Datasets/categories-products.xml");
             Console.WriteLine(ImportCategoryProducts(context, categoriesProductsData));
 
-            Console.WriteLine(GetProductsInRange(context));
+            Console.WriteLine(GetUsersWithProducts(context));
 
 
         }
@@ -156,24 +156,78 @@ namespace ProductShop
               .Take(10)
               .ToList();
 
-            XmlRootAttribute productRoot = new XmlRootAttribute();
-            productRoot.ElementName = "Products";
-
-            XmlSerializerNamespaces namespaces = new XmlSerializerNamespaces();
-            namespaces.Add(String.Empty, String.Empty);
-
-            XmlSerializer serializer = new XmlSerializer(typeof(List<ExportProductDto>), productRoot);
-
-            using (TextWriter writer = new StreamWriter("result.xml"))
-            {
-                serializer.Serialize(writer, products, namespaces);
-            }
-                
-            string result = File.ReadAllText("result.xml");
-            return result;
+            return GenerateOutput<List<ExportProductDto>>("Products", products);                   
         }
 
+        //06. Export Sold Products
+        public static string GetSoldProducts(ProductShopContext context)
+        {
+            IMapper mapper = CreateMapper();
 
+            var users = context.Users
+                .Where(u => u.ProductsSold.Any())
+                .ProjectTo<ExportUserDto>(mapper.ConfigurationProvider)
+                .OrderBy(x => x.LastName)
+                .ThenBy(x => x.FirstName)
+                .Take(5)
+                .ToList();
+
+            return GenerateOutput<List<ExportUserDto>>("Users", users);
+        }
+
+        //07. Export Categories By Products Count
+        public static string GetCategoriesByProductsCount(ProductShopContext context)
+        {
+            IMapper mapper = CreateMapper();
+
+            var categories = context.Categories
+                .ProjectTo<ExportCategoryDto>(mapper.ConfigurationProvider)
+                 .OrderByDescending(c => c.Count)
+                 .ThenBy(c => c.TotalRevenue)
+                 .ToList();
+
+            return GenerateOutput<List<ExportCategoryDto>>("Categories", categories);
+
+        }
+
+        //08. Export Users and Products
+        public static string GetUsersWithProducts(ProductShopContext context)
+        {
+            IMapper mapper = CreateMapper();
+
+            var users = context.Users
+                .Where(u => u.ProductsSold.Any())
+                .Select(u => new ExportUsersWithProductsDto
+                {
+                    FirstName = u.FirstName,
+                    LastName = u.LastName,
+                    Age = u.Age,
+                    SoldProducts = new SoldProductsDto
+                    {
+                        Count = u.ProductsSold.Count,
+                        Products = u.ProductsSold
+                        .OrderByDescending(x => x.Price)
+                        .Select(x => new ExportSoldProductsDto
+                        {
+                            Name = x.Name,
+                            Price = $"{x.Price}"
+                        })
+                        .ToList()
+                    }
+                })
+                .OrderByDescending(u => u.SoldProducts.Products.Count)
+                .Take(10)
+                .ToList();
+
+            var resultObj = new
+            {
+                count = context.Users.Count(x => x.ProductsSold.Any()),
+                Users = users
+
+            };
+
+            return GenerateOutput<T>("Users", resultObj);
+        }
         public static IMapper CreateMapper()
         {
             MapperConfiguration config = new MapperConfiguration(cfg =>
@@ -183,6 +237,25 @@ namespace ProductShop
 
             IMapper mapper = config.CreateMapper();
             return mapper;
+        }
+
+        public static string GenerateOutput<T>(string rootName, T dtoParam)
+        {
+            XmlRootAttribute productRoot = new XmlRootAttribute();
+            productRoot.ElementName = rootName;
+
+            XmlSerializerNamespaces namespaces = new XmlSerializerNamespaces();
+            namespaces.Add(String.Empty, String.Empty);
+
+            XmlSerializer serializer = new XmlSerializer(typeof(T), productRoot);
+
+            using (TextWriter writer = new StreamWriter("result.xml"))
+            {
+                serializer.Serialize(writer, dtoParam, namespaces);
+            }
+
+            string result = File.ReadAllText("result.xml");
+            return result;
         }
     }
 }
