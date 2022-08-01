@@ -196,6 +196,7 @@ namespace ProductShop
             IMapper mapper = CreateMapper();
 
             var users = context.Users
+                .ToList()
                 .Where(u => u.ProductsSold.Any())
                 .Select(u => new ExportUsersWithProductsDto
                 {
@@ -219,20 +220,22 @@ namespace ProductShop
                 .Take(10)
                 .ToList();
 
-            var resultObj = new
+
+            var resultObj = new ExportResultUsersWithProductsDto
             {
-                count = context.Users.Count(x => x.ProductsSold.Any()),
+                Count = context.Users.Count(x => x.ProductsSold.Any()),
                 Users = users
 
             };
 
-            return GenerateOutput<T>("Users", resultObj);
+            return GenerateOutput<ExportResultUsersWithProductsDto>("Users", resultObj);
         }
         public static IMapper CreateMapper()
         {
             MapperConfiguration config = new MapperConfiguration(cfg =>
             {
                 cfg.AddProfile<ProductShopProfile>();
+                cfg.CreateMissingTypeMaps = true;
             });
 
             IMapper mapper = config.CreateMapper();
