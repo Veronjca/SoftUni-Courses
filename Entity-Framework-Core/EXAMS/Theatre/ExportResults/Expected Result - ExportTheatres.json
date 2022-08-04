@@ -1,0 +1,675 @@
+[
+  {
+    "Name": "Capitol Theatre Building",
+    "Halls": 10,
+    "TotalIncome": 860.02,
+    "Tickets": [
+      {
+        "Price": 93.48,
+        "RowNumber": 3
+      },
+      {
+        "Price": 93.41,
+        "RowNumber": 1
+      },
+      {
+        "Price": 86.21,
+        "RowNumber": 5
+      },
+      {
+        "Price": 86.14,
+        "RowNumber": 5
+      },
+      {
+        "Price": 85.64,
+        "RowNumber": 4
+      },
+      {
+        "Price": 85.09,
+        "RowNumber": 1
+      },
+      {
+        "Price": 79.01,
+        "RowNumber": 3
+      },
+      {
+        "Price": 68.56,
+        "RowNumber": 1
+      },
+      {
+        "Price": 62.14,
+        "RowNumber": 3
+      },
+      {
+        "Price": 55.96,
+        "RowNumber": 1
+      },
+      {
+        "Price": 40.18,
+        "RowNumber": 5
+      },
+      {
+        "Price": 13.83,
+        "RowNumber": 3
+      },
+      {
+        "Price": 10.37,
+        "RowNumber": 3
+      }
+    ]
+  },
+  {
+    "Name": "Royal Cinema",
+    "Halls": 10,
+    "TotalIncome": 802.81,
+    "Tickets": [
+      {
+        "Price": 94.25,
+        "RowNumber": 2
+      },
+      {
+        "Price": 93.70,
+        "RowNumber": 3
+      },
+      {
+        "Price": 92.82,
+        "RowNumber": 4
+      },
+      {
+        "Price": 83.18,
+        "RowNumber": 3
+      },
+      {
+        "Price": 74.45,
+        "RowNumber": 5
+      },
+      {
+        "Price": 74.43,
+        "RowNumber": 4
+      },
+      {
+        "Price": 65.21,
+        "RowNumber": 5
+      },
+      {
+        "Price": 57.78,
+        "RowNumber": 2
+      },
+      {
+        "Price": 57.30,
+        "RowNumber": 3
+      },
+      {
+        "Price": 48.87,
+        "RowNumber": 2
+      },
+      {
+        "Price": 44.24,
+        "RowNumber": 2
+      },
+      {
+        "Price": 11.53,
+        "RowNumber": 5
+      },
+      {
+        "Price": 5.05,
+        "RowNumber": 5
+      }
+    ]
+  },
+  {
+    "Name": "Artcraft Theatre",
+    "Halls": 9,
+    "TotalIncome": 780.33,
+    "Tickets": [
+      {
+        "Price": 99.92,
+        "RowNumber": 1
+      },
+      {
+        "Price": 94.23,
+        "RowNumber": 1
+      },
+      {
+        "Price": 92.75,
+        "RowNumber": 2
+      },
+      {
+        "Price": 91.12,
+        "RowNumber": 2
+      },
+      {
+        "Price": 90.78,
+        "RowNumber": 3
+      },
+      {
+        "Price": 84.19,
+        "RowNumber": 5
+      },
+      {
+        "Price": 81.76,
+        "RowNumber": 1
+      },
+      {
+        "Price": 53.60,
+        "RowNumber": 1
+      },
+      {
+        "Price": 53.41,
+        "RowNumber": 1
+      },
+      {
+        "Price": 22.84,
+        "RowNumber": 1
+      },
+      {
+        "Price": 15.73,
+        "RowNumber": 3
+      }
+    ]
+  },
+  {
+    "Name": "Thacher",
+    "Halls": 9,
+    "TotalIncome": 634.16,
+    "Tickets": [
+      {
+        "Price": 90.30,
+        "RowNumber": 5
+      },
+      {
+        "Price": 88.76,
+        "RowNumber": 1
+      },
+      {
+        "Price": 77.35,
+        "RowNumber": 4
+      },
+      {
+        "Price": 74.05,
+        "RowNumber": 5
+      },
+      {
+        "Price": 65.96,
+        "RowNumber": 3
+      },
+      {
+        "Price": 47.06,
+        "RowNumber": 5
+      },
+      {
+        "Price": 45.18,
+        "RowNumber": 3
+      },
+      {
+        "Price": 44.55,
+        "RowNumber": 5
+      },
+      {
+        "Price": 44.33,
+        "RowNumber": 2
+      },
+      {
+        "Price": 18.12,
+        "RowNumber": 3
+      },
+      {
+        "Price": 13.67,
+        "RowNumber": 1
+      },
+      {
+        "Price": 12.99,
+        "RowNumber": 4
+      },
+      {
+        "Price": 11.84,
+        "RowNumber": 4
+      }
+    ]
+  },
+  {
+    "Name": "Toneelschuur",
+    "Halls": 9,
+    "TotalIncome": 947.74,
+    "Tickets": [
+      {
+        "Price": 96.14,
+        "RowNumber": 1
+      },
+      {
+        "Price": 91.46,
+        "RowNumber": 5
+      },
+      {
+        "Price": 89.78,
+        "RowNumber": 4
+      },
+      {
+        "Price": 88.55,
+        "RowNumber": 4
+      },
+      {
+        "Price": 87.88,
+        "RowNumber": 5
+      },
+      {
+        "Price": 71.45,
+        "RowNumber": 3
+      },
+      {
+        "Price": 70.97,
+        "RowNumber": 3
+      },
+      {
+        "Price": 64.47,
+        "RowNumber": 2
+      },
+      {
+        "Price": 55.01,
+        "RowNumber": 4
+      },
+      {
+        "Price": 42.79,
+        "RowNumber": 3
+      },
+      {
+        "Price": 36.84,
+        "RowNumber": 2
+      },
+      {
+        "Price": 36.28,
+        "RowNumber": 4
+      },
+      {
+        "Price": 35.91,
+        "RowNumber": 4
+      },
+      {
+        "Price": 34.91,
+        "RowNumber": 2
+      },
+      {
+        "Price": 29.27,
+        "RowNumber": 2
+      },
+      {
+        "Price": 13.66,
+        "RowNumber": 5
+      },
+      {
+        "Price": 2.37,
+        "RowNumber": 5
+      }
+    ]
+  },
+  {
+    "Name": "Astor Theater",
+    "Halls": 8,
+    "TotalIncome": 1042.41,
+    "Tickets": [
+      {
+        "Price": 84.64,
+        "RowNumber": 5
+      },
+      {
+        "Price": 83.78,
+        "RowNumber": 5
+      },
+      {
+        "Price": 82.84,
+        "RowNumber": 1
+      },
+      {
+        "Price": 82.07,
+        "RowNumber": 1
+      },
+      {
+        "Price": 80.08,
+        "RowNumber": 2
+      },
+      {
+        "Price": 77.37,
+        "RowNumber": 3
+      },
+      {
+        "Price": 74.92,
+        "RowNumber": 5
+      },
+      {
+        "Price": 68.88,
+        "RowNumber": 5
+      },
+      {
+        "Price": 68.05,
+        "RowNumber": 1
+      },
+      {
+        "Price": 61.01,
+        "RowNumber": 4
+      },
+      {
+        "Price": 58.99,
+        "RowNumber": 5
+      },
+      {
+        "Price": 55.33,
+        "RowNumber": 2
+      },
+      {
+        "Price": 54.22,
+        "RowNumber": 3
+      },
+      {
+        "Price": 52.35,
+        "RowNumber": 4
+      },
+      {
+        "Price": 40.54,
+        "RowNumber": 5
+      },
+      {
+        "Price": 17.34,
+        "RowNumber": 3
+      }
+    ]
+  },
+  {
+    "Name": "Gothic Theatre",
+    "Halls": 8,
+    "TotalIncome": 466.10,
+    "Tickets": [
+      {
+        "Price": 98.33,
+        "RowNumber": 3
+      },
+      {
+        "Price": 83.13,
+        "RowNumber": 1
+      },
+      {
+        "Price": 56.77,
+        "RowNumber": 5
+      },
+      {
+        "Price": 55.33,
+        "RowNumber": 4
+      },
+      {
+        "Price": 51.78,
+        "RowNumber": 3
+      },
+      {
+        "Price": 48.03,
+        "RowNumber": 4
+      },
+      {
+        "Price": 42.81,
+        "RowNumber": 3
+      },
+      {
+        "Price": 19.48,
+        "RowNumber": 2
+      },
+      {
+        "Price": 10.44,
+        "RowNumber": 1
+      }
+    ]
+  },
+  {
+    "Name": "Le Balzac",
+    "Halls": 8,
+    "TotalIncome": 610.32,
+    "Tickets": [
+      {
+        "Price": 80.29,
+        "RowNumber": 1
+      },
+      {
+        "Price": 80.08,
+        "RowNumber": 2
+      },
+      {
+        "Price": 66.15,
+        "RowNumber": 3
+      },
+      {
+        "Price": 62.09,
+        "RowNumber": 2
+      },
+      {
+        "Price": 61.03,
+        "RowNumber": 1
+      },
+      {
+        "Price": 56.63,
+        "RowNumber": 5
+      },
+      {
+        "Price": 40.85,
+        "RowNumber": 1
+      },
+      {
+        "Price": 38.59,
+        "RowNumber": 1
+      },
+      {
+        "Price": 34.08,
+        "RowNumber": 3
+      },
+      {
+        "Price": 33.74,
+        "RowNumber": 2
+      },
+      {
+        "Price": 23.29,
+        "RowNumber": 3
+      },
+      {
+        "Price": 17.84,
+        "RowNumber": 4
+      },
+      {
+        "Price": 15.66,
+        "RowNumber": 5
+      }
+    ]
+  },
+  {
+    "Name": "Babylon",
+    "Halls": 7,
+    "TotalIncome": 550.62,
+    "Tickets": [
+      {
+        "Price": 99.77,
+        "RowNumber": 5
+      },
+      {
+        "Price": 92.01,
+        "RowNumber": 5
+      },
+      {
+        "Price": 80.33,
+        "RowNumber": 5
+      },
+      {
+        "Price": 68.00,
+        "RowNumber": 1
+      },
+      {
+        "Price": 56.56,
+        "RowNumber": 3
+      },
+      {
+        "Price": 43.38,
+        "RowNumber": 5
+      },
+      {
+        "Price": 41.30,
+        "RowNumber": 1
+      },
+      {
+        "Price": 22.57,
+        "RowNumber": 4
+      },
+      {
+        "Price": 20.69,
+        "RowNumber": 5
+      },
+      {
+        "Price": 17.53,
+        "RowNumber": 3
+      },
+      {
+        "Price": 7.43,
+        "RowNumber": 1
+      },
+      {
+        "Price": 1.05,
+        "RowNumber": 1
+      }
+    ]
+  },
+  {
+    "Name": "Fox Theatre",
+    "Halls": 7,
+    "TotalIncome": 752.45,
+    "Tickets": [
+      {
+        "Price": 99.47,
+        "RowNumber": 1
+      },
+      {
+        "Price": 96.87,
+        "RowNumber": 4
+      },
+      {
+        "Price": 86.28,
+        "RowNumber": 3
+      },
+      {
+        "Price": 65.48,
+        "RowNumber": 4
+      },
+      {
+        "Price": 60.93,
+        "RowNumber": 1
+      },
+      {
+        "Price": 55.14,
+        "RowNumber": 3
+      },
+      {
+        "Price": 42.02,
+        "RowNumber": 1
+      },
+      {
+        "Price": 38.87,
+        "RowNumber": 3
+      },
+      {
+        "Price": 36.34,
+        "RowNumber": 3
+      },
+      {
+        "Price": 31.08,
+        "RowNumber": 3
+      },
+      {
+        "Price": 28.81,
+        "RowNumber": 4
+      },
+      {
+        "Price": 28.31,
+        "RowNumber": 3
+      },
+      {
+        "Price": 26.34,
+        "RowNumber": 4
+      },
+      {
+        "Price": 24.15,
+        "RowNumber": 3
+      },
+      {
+        "Price": 11.56,
+        "RowNumber": 3
+      },
+      {
+        "Price": 11.22,
+        "RowNumber": 3
+      },
+      {
+        "Price": 9.58,
+        "RowNumber": 5
+      }
+    ]
+  },
+  {
+    "Name": "Fox Theatre Inglewood",
+    "Halls": 7,
+    "TotalIncome": 814.46,
+    "Tickets": [
+      {
+        "Price": 85.54,
+        "RowNumber": 2
+      },
+      {
+        "Price": 83.69,
+        "RowNumber": 5
+      },
+      {
+        "Price": 81.80,
+        "RowNumber": 4
+      },
+      {
+        "Price": 79.66,
+        "RowNumber": 5
+      },
+      {
+        "Price": 76.96,
+        "RowNumber": 5
+      },
+      {
+        "Price": 76.19,
+        "RowNumber": 1
+      },
+      {
+        "Price": 66.17,
+        "RowNumber": 5
+      },
+      {
+        "Price": 65.45,
+        "RowNumber": 5
+      },
+      {
+        "Price": 52.86,
+        "RowNumber": 5
+      },
+      {
+        "Price": 49.65,
+        "RowNumber": 3
+      },
+      {
+        "Price": 42.66,
+        "RowNumber": 1
+      },
+      {
+        "Price": 18.37,
+        "RowNumber": 5
+      },
+      {
+        "Price": 14.29,
+        "RowNumber": 5
+      },
+      {
+        "Price": 11.09,
+        "RowNumber": 1
+      },
+      {
+        "Price": 10.08,
+        "RowNumber": 5
+      }
+    ]
+  }
+]

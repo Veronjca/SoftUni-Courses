@@ -1,0 +1,48 @@
+﻿Invalid data!
+Successfully imported Candida with genre Romance and a rating of 6.5!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Invalid data!
+Successfully imported Playboy of the Western World with genre Comedy and a rating of 6.1!
+Successfully imported The Importance of Being with genre Musical and a rating of 1.3!
+Successfully imported Awake and Sing with genre Drama and a rating of 3.8!
+Successfully imported The School for Scandal with genre Musical and a rating of 8!
+Successfully imported Stuff Happens with genre Comedy and a rating of 6.3!
+Successfully imported Life With Father with genre Comedy and a rating of 0!
+Invalid data!
+Successfully imported The Normal Heart with genre Musical and a rating of 7.7!
+Invalid data!
+Successfully imported Rosencrantz and Guildenstern Are Dead with genre Musical and a rating of 8!
+Invalid data!
+Successfully imported This Is Our Youth with genre Romance and a rating of 8.9!
+Successfully imported Uncommon Women with genre Romance and a rating of 9.5!
+Successfully imported What the Butler Saw with genre Comedy and a rating of 5.2!
+Invalid data!
+Successfully imported Tartuffe with genre Drama and a rating of 0!
+Invalid data!
+Successfully imported The Vortex with genre Comedy and a rating of 9.3!
+Invalid data!
+Successfully imported Uncle Vanya with genre Drama and a rating of 0!
+Invalid data!
+Successfully imported Fences with genre Musical and a rating of 4.7!
+Invalid data!
+Invalid data!
+Successfully imported The Homecoming with genre Drama and a rating of 8.2!
+Successfully imported Hedda Gabler with genre Musical and a rating of 1!
+Invalid data!
+Successfully imported Waiting for Godot with genre Comedy and a rating of 9.4!
+Successfully imported Woyzeck with genre Drama and a rating of 3.4!
+Successfully imported A Raisin in the Sun with genre Drama and a rating of 5.4!
+Successfully imported Look Back in Anger with genre Musical and a rating of 5.3!
+Successfully imported The Glass Menagerie with genre Drama and a rating of 9.2!
+Invalid data!
+Successfully imported Angels in America with genre Comedy and a rating of 9.3!
+Successfully imported Oedipus Rex with genre Musical and a rating of 7.2!
+Successfully imported Death of a Salesman with genre Romance and a rating of 9.9!
+Successfully imported The Glass Menagerie with genre Romance and a rating of 9!
+Invalid data!
+Successfully imported Hamlet with genre Comedy and a rating of 4.1!
+Successfully imported Three Kingdoms with genre Drama and a rating of 6.1!
+Successfully imported Mission Drift with genre Comedy and a rating of 7.1!
